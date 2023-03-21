@@ -13,7 +13,10 @@ body {
 .nav-link  {
     font-size: 1.3rem;
 }
+.list-inline li a {
+    color: white;
 
+}
 /*galeria*/
 .banner-galeria {
     background-image: url("../imagenes/baner.png")
