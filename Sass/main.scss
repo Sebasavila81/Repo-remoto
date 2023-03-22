@@ -1,5 +1,10 @@
-body {
-    background-color: white;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Exo&family=Poppins:wght@300&display=swap');
+@import "vars";
+@import "global";
+@import "header";
+@import "pages";
+@import "footer";
+@import "media";
+
+
+

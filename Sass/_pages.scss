@@ -1,0 +1,127 @@
+//galeria//
+.main-galeria {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+}
+
+
+.grid-galeria img {
+    width: 300px;
+    height: 200px;
+
+
+}
+
+.grid-galeria img:hover {
+    box-shadow: 4px 4px 4px rgb(14, 7, 7);
+    filter: opacity(0.5);
+}
+
+.grid-galeria {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+//amenities//
+
+.main-amenities {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 100px;
+
+}
+.iconos-amenities {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.iconos-amenities div i {
+    font-size: 70px;
+}
+
+//habitaciones//
+.main-habitaciones {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+
+}
+
+.habitaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.imag-hab {
+    width: 300px;
+    height: auto;
+}
+
+//contactos//
+
+form {
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
+    max-width: 500px;
+}
+
+.main-contacto {
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+
+}
+.seccion-contacto {
+    display: flex;
+    padding: 100px;
+    justify-content: space-around;
+
+}
+.titulo-contacto {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.parrafo-contacto {
+    font-size: 24px;
+    max-width: 500px;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+input {
+    max-width: 70%;
+}
+.imagen-contacto {
+    height: 500px;
+    width: 500px;
+}
