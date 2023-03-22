@@ -14,31 +14,30 @@ body {
   font-size: 1.3rem;
 }
 
+/*galeria*/
 .main-galeria {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
   align-items: center;
 }
-
-.grid-galeria img {
-  width: 300px;
-  height: 200px;
-}
-
-.grid-galeria img:hover {
-  box-shadow: 4px 4px 4px rgb(14, 7, 7);
-  filter: opacity(0.5);
-}
-
-.grid-galeria {
+.main-galeria .grid-galeria {
   margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 50px;
 }
+.main-galeria .grid-galeria img {
+  width: 300px;
+  height: 200px;
+}
+.main-galeria .grid-galeria img:hover {
+  box-shadow: 4px 4px 4px rgb(14, 7, 7);
+  filter: opacity(0.5);
+}
 
+/*amenities*/
 .main-amenities {
   display: grid;
   grid-template-rows: auto;
@@ -47,82 +46,51 @@ body {
   justify-items: center;
   padding: 100px;
 }
-
-.iconos-amenities {
+.main-amenities .iconos-amenities {
   width: 1200px;
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 100px;
 }
-
-.iconos-amenities div i {
+.main-amenities .iconos-amenities i {
   font-size: 70px;
 }
 
-.main-habitaciones {
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.habitaciones {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  margin-top: 50px;
-}
-
-.imag-hab {
-  width: 300px;
-  height: auto;
-}
-
-form {
-  border: solid black 1px;
-  border-radius: 15px;
-  padding: 50px;
-  box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.8);
-  max-width: 500px;
-}
-
+/*contactos*/
 .main-contacto {
   padding: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
-.seccion-contacto {
+.main-contacto .titulo-contacto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-contacto .seccion-contacto {
   display: flex;
   padding: 100px;
   justify-content: space-around;
 }
-
-.titulo-contacto {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.parrafo-contacto {
+.main-contacto .seccion-contacto .parrafo-contacto {
   font-size: 24px;
   max-width: 500px;
 }
-
-.flex-form {
+.main-contacto .seccion-contacto form {
+  border: solid black 1px;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.8);
+  max-width: 500px;
+}
+.main-contacto .seccion-contacto form .flex-form {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-
-input {
+.main-contacto .seccion-contacto form input {
   max-width: 70%;
-}
-
-.imagen-contacto {
-  height: 500px;
-  width: 500px;
 }
 
 .list-inline li a {
@@ -130,6 +98,7 @@ input {
 }
 
 @media (max-width: 768px) {
+  /*Amenities responsive*/
   .main-amenities {
     display: grid;
     grid-template-rows: auto;
@@ -138,58 +107,60 @@ input {
     justify-items: center;
     padding: 50px;
   }
-  .iconos-amenities {
+  .main-amenities .iconos-amenities {
     width: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .iconos-amenities div i {
-    font-size: 40px;
-  }
-  .iconos-amenities div {
+  .main-amenities .iconos-amenities div {
     padding: 10px;
   }
-  .grid-galeria img {
-    width: 80vw;
-    height: 25vh;
+  .main-amenities .iconos-amenities div i {
+    font-size: 40px;
   }
-  .grid-galeria {
+  /* Galeria responsive*/
+  .main-galeria .grid-galeria {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 40px;
   }
+  .main-galeria .grid-galeria img {
+    width: 80vw;
+    height: 25vh;
+  }
+  /* Contacto responsive*/
   .main-contacto {
     padding: 10px;
     display: flex;
     flex-direction: column;
   }
-  .seccion-contacto {
+  .main-contacto .titulo-contacto {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .main-contacto .seccion-contacto {
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
   }
-  form {
-    padding: 10px;
-    max-width: 80vw;
-  }
-  .titulo-contacto {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .parrafo-contacto {
+  .main-contacto .seccion-contacto .parrafo-contacto {
     font-size: 18px;
     max-width: 350px;
     text-align: center;
     padding-top: 50px;
   }
-  .flex-form {
+  .main-contacto .seccion-contacto form {
+    padding: 10px;
+    max-width: 80vw;
+  }
+  .main-contacto .seccion-contacto form .flex-form {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
   }
-  input {
+  .main-contacto .seccion-contacto form .flex-form input {
     max-width: 70%;
   }
 }/*# sourceMappingURL=main.css.map */
