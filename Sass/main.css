@@ -10,15 +10,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.animacion-titulo:hover > h1 {
-  animation: jackInTheBox;
-  animation-duration: 1s;
-  font-weight: bold;
-  transition: all 1s;
+nav {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+nav .nav-link {
+  font-size: 1.3rem;
 }
 
-.nav-link {
-  font-size: 1.3rem;
+.bg-image {
+  background-image: url("../imagenes/carrusel2.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*galeria*/
