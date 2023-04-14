@@ -94,22 +94,10 @@ nav .nav-link {
 }
 
 /*amenities*/
-.main-amenities {
-  display: grid;
-  grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  padding: 100px;
-}
-.main-amenities .iconos-amenities {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+.iconos-amenities {
   margin-top: 100px;
 }
-.main-amenities .iconos-amenities i {
+.iconos-amenities i {
   font-size: 70px;
 }
 

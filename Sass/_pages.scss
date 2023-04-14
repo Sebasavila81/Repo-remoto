@@ -24,6 +24,7 @@
         }
     }
 }
+
 /*Habitaciones*/
 
 .overlay {
@@ -40,9 +41,11 @@
     z-index: 1;
 
 }
+
 .image-container {
     position: relative;
 }
+
 .image-container:hover .overlay {
     transition: 1s;
     width: 0%;
@@ -51,41 +54,31 @@
     left: 50%;
     border-radius: 200px;
     opacity: 0;
-    
+
 }
+
 .image-container:hover .overlay p {
     transition: 1s;
     font-size: 0px;
 }
+
 .overlay p {
     font-size: 36px;
-} 
+}
+
 .card-title {
     display: none;
 }
 
 
 /*amenities*/
-.main-amenities {
-    display: grid;
-    grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 100px;
-
-    .iconos-amenities {
-        width: 1200px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        margin-top: 100px;
-
-        i {
-            font-size: 70px;
-        }
+.iconos-amenities {
+    margin-top: 100px;
+    i {
+        font-size: 70px;
     }
 }
+
 /*contactos*/
 .main-contacto {
     padding: 120px;
