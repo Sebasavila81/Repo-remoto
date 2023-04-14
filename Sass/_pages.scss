@@ -1,3 +1,28 @@
+/*Index*/
+.parallax {
+    min-height: 600px; 
+    background-image: url('../imagenes/carrusel2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h3 {
+        color: white;
+        font-size: 70PX;
+        font-weight: 400;
+        font-family: "DM Serif Display",serif;
+        
+        
+    }
+}
+.bg-darken {
+    background-color: grey;
+    background-blend-mode: multiply;
+}
+
+
+
+
 /*galeria*/
 .main-galeria {
     display: flex;
