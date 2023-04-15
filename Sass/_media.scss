@@ -19,28 +19,7 @@
     }
 
     /*Amenities responsive*/
-    .main-amenities {
-        display: grid;
-        grid-template-rows: auto;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        padding: 50px;
-
-        .iconos-amenities {
-            width: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            div {
-                padding: 10px;
-
-                i {
-                    font-size: 40px;
-                }
-            }
-        }
-    }
+    
 
     /* Galeria responsive*/
     .main-galeria {

@@ -126,11 +126,17 @@ nav .nav-link {
 }
 
 /*amenities*/
+.tittle-main {
+  font-size: 50px;
+  color: #003454;
+  font-weight: 700;
+}
+
 .iconos-amenities {
   margin-top: 100px;
 }
 .iconos-amenities i {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 /*contactos*/
@@ -187,25 +193,6 @@ nav .nav-link {
     display: block;
   }
   /*Amenities responsive*/
-  .main-amenities {
-    display: grid;
-    grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 50px;
-  }
-  .main-amenities .iconos-amenities {
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .main-amenities .iconos-amenities div {
-    padding: 10px;
-  }
-  .main-amenities .iconos-amenities div i {
-    font-size: 40px;
-  }
   /* Galeria responsive*/
   .main-galeria .grid-galeria {
     display: grid;
