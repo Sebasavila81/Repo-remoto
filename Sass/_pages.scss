@@ -1,10 +1,6 @@
 /*Index*/
 .text-main {
-    h1 {
-        font-size: 70px;
-        color: #003454;
-    }
-
+    
     .lead {
         font-family: "Pragati Narrow", sans-serif;
         color: #4d4d4d;
@@ -22,9 +18,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    h3 {
+    h4 {
         color: white;
-        font-size: 70PX;
+        font-size: 55PX;
         font-weight: 400;
         font-family: "DM Serif Display", serif;
 
@@ -41,6 +37,12 @@
 
 
 /*galeria*/
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+
 .main-galeria {
     display: flex;
     flex-direction: column;
@@ -52,7 +54,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 50px;
+        gap: 20px;
 
         img {
             width: 300px;
@@ -130,6 +132,15 @@
 
 
 /*contactos*/
+
+
+
+
+
+
+
+
+
 .main-contacto {
     padding: 120px;
     display: flex;
@@ -150,6 +161,10 @@
         .parrafo-contacto {
             font-size: 24px;
             max-width: 500px;
+            img {
+                width: 320px;
+                height: 300px;
+            }
         }
 
         form {

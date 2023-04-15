@@ -8,8 +8,16 @@ nav {
     }
 }
 
-.bg-image {
+.bg-image1 {
     background-image: url('../imagenes/carrusel1.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.bg-image2 {
+    background-image: url('../imagenes/pileta0.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;

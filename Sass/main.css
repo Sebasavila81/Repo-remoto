@@ -10,6 +10,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  font-size: 70px;
+  color: #003454;
+}
+
+h3 {
+  color: #003454;
+}
+
 nav {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -19,7 +28,7 @@ nav .nav-link {
   font-size: 1.3rem;
 }
 
-.bg-image {
+.bg-image1 {
   background-image: url("../imagenes/carrusel1.png");
   height: 100vh;
   background-position: center;
@@ -27,11 +36,15 @@ nav .nav-link {
   background-size: cover;
 }
 
-/*Index*/
-.text-main h1 {
-  font-size: 70px;
-  color: #003454;
+.bg-image2 {
+  background-image: url("../imagenes/pileta0.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+/*Index*/
 .text-main .lead {
   font-family: "Pragati Narrow", sans-serif;
   color: #4d4d4d;
@@ -47,9 +60,9 @@ nav .nav-link {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.parallax h3 {
+.parallax h4 {
   color: white;
-  font-size: 70PX;
+  font-size: 55PX;
   font-weight: 400;
   font-family: "DM Serif Display", serif;
 }
@@ -60,6 +73,11 @@ nav .nav-link {
 }
 
 /*galeria*/
+#myVideo {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .main-galeria {
   display: flex;
   flex-direction: column;
@@ -71,7 +89,7 @@ nav .nav-link {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 50px;
+  gap: 20px;
 }
 .main-galeria .grid-galeria img {
   width: 300px;
@@ -159,6 +177,10 @@ nav .nav-link {
   font-size: 24px;
   max-width: 500px;
 }
+.main-contacto .seccion-contacto .parrafo-contacto img {
+  width: 320px;
+  height: 300px;
+}
 .main-contacto .seccion-contacto form {
   border: solid black 1px;
   border-radius: 15px;
@@ -198,11 +220,11 @@ nav .nav-link {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    gap: 40px;
+    gap: 20px;
   }
   .main-galeria .grid-galeria img {
-    width: 80vw;
-    height: 25vh;
+    width: 70vw;
+    height: 30vh;
   }
   /* Contacto responsive*/
   .main-contacto {
