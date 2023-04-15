@@ -1,20 +1,37 @@
 /*Index*/
+.text-main {
+    h1 {
+        font-size: 70px;
+        color: #003454;
+    }
+
+    .lead {
+        font-family: "Pragati Narrow", sans-serif;
+        color: #4d4d4d;
+        margin-top: 60px;
+        padding-left: 50px;
+    }
+
+}
+
 .parallax {
-    min-height: 600px; 
+    min-height: 600px;
     background-image: url('../imagenes/carrusel2.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     h3 {
         color: white;
         font-size: 70PX;
         font-weight: 400;
-        font-family: "DM Serif Display",serif;
-        
-        
+        font-family: "DM Serif Display", serif;
+
+
     }
 }
+
 .bg-darken {
     background-color: grey;
     background-blend-mode: multiply;
@@ -99,6 +116,7 @@
 /*amenities*/
 .iconos-amenities {
     margin-top: 100px;
+
     i {
         font-size: 70px;
     }

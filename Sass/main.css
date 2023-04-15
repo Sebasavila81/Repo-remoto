@@ -28,6 +28,17 @@ nav .nav-link {
 }
 
 /*Index*/
+.text-main h1 {
+  font-size: 70px;
+  color: #003454;
+}
+.text-main .lead {
+  font-family: "Pragati Narrow", sans-serif;
+  color: #4d4d4d;
+  margin-top: 60px;
+  padding-left: 50px;
+}
+
 .parallax {
   min-height: 600px;
   background-image: url("../imagenes/carrusel2.png");
@@ -163,6 +174,11 @@ nav .nav-link {
 }
 
 @media (max-width: 768px) {
+  /* Index Responsive*/
+  .text-main .lead {
+    margin-top: 0px;
+    padding-left: 0px;
+  }
   /* Habitacion responsive*/
   .overlay {
     display: none;
