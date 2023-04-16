@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Exo&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -15,25 +16,29 @@ h1 {
   color: #003454;
 }
 
-h3 {
-  color: #003454;
-}
-
 nav {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(52, 58, 64, 0.5);
+  min-height: 6vh;
 }
 nav .nav-link {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  color: white;
 }
 
-.bg-image1 {
-  background-image: url("../imagenes/carrusel1.png");
+.bg-image {
+  background-image: url("../imagenes/banner-alternativo.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .bg-image2 {
@@ -44,6 +49,20 @@ nav .nav-link {
   background-size: cover;
 }
 
+.bg-image-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-item {
+  opacity: 0;
+  transition: opacity ease-out 0.5s;
+}
+
+.carousel-item.active {
+  opacity: 1 !important;
+}
+
 /*Index*/
 .text-main .lead {
   font-family: "Pragati Narrow", sans-serif;
@@ -51,25 +70,40 @@ nav .nav-link {
   margin-top: 60px;
   padding-left: 50px;
 }
+.text-main .btn-main {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
 
 .parallax {
-  min-height: 600px;
-  background-image: url("../imagenes/carrusel2.png");
+  min-height: 100vh;
+  background-image: url("../imagenes/cenote1.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.parallax h4 {
+.parallax h3 {
   color: white;
-  font-size: 55PX;
+  font-size: 40px;
   font-weight: 400;
-  font-family: "DM Serif Display", serif;
+}
+
+.carousel-item h3 {
+  font-size: 40px;
 }
 
 .bg-darken {
   background-color: grey;
   background-blend-mode: multiply;
+}
+
+.bg-pattern {
+  background-image: url("../imagenes/ddc15.jpg");
+  background-repeat: repeat;
+  background-size: 50%;
 }
 
 /*galeria*/
@@ -147,7 +181,7 @@ nav .nav-link {
 .tittle-main {
   font-size: 50px;
   color: #003454;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .iconos-amenities {
@@ -206,6 +240,13 @@ nav .nav-link {
   .text-main .lead {
     margin-top: 0px;
     padding-left: 0px;
+  }
+  .parallax {
+    min-height: 300px;
+  }
+  .parallax h4 {
+    font-size: 30px;
+    font-weight: 200;
   }
   /* Habitacion responsive*/
   .overlay {

@@ -9,8 +9,7 @@
     <meta name="description"
         content="Veni a vivir la experiencia Izsla Hostel, en una de las mejores playas del mundo.">
     <meta name="keywords" content="Playa del Carmen, Experiencia, Hostel, Vacaciones, Mundo, Gente, Caribe">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -22,10 +21,10 @@
 <body>
     <header>
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
-                    <img src="./imagenes/logo-izsla.png" alt="logo" width="100" height="100">
+                    <img src="./imagenes/logo-izsla.png" alt="logo" width="40" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -33,7 +32,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="container-fluid collapse navbar-collapse text-center" id="navbarSupportedContent">
-                    <div class="navbar-nav mx-auto mb-lg-0">
+                    <div class="navbar-nav mx-auto">
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                         <a class="nav-link " href="./paginas/habitaciones.html">Habitaciones</a>
                         <a class="nav-link " href="./paginas/amenities.html">Amenities</a>
@@ -42,11 +41,11 @@
 
                     </div>
                     <span class="navbar-text d-flex align-items-center justify-content-center">
-                        <img class="mx-3" src="./imagenes/band-mexico.jpg" alt="mexico" width="16px" height="12px">
-                        <a>español</a>
-                        <div class="vr ms-3"></div>
-                        <img class="mx-3" src="./imagenes/band-eeuu.jpg" alt="ingles" width="16px" height="12px">
-                        <a>ingles</a>
+                        <img class="mx-1" src="./imagenes/band-mexico.jpg" alt="mexico" width="16px" height="12px">
+                        <a>es</a>
+                        <div class="vr ms-1"></div>
+                        <img class="mx-1" src="./imagenes/band-eeuu.jpg" alt="ingles" width="16px" height="12px">
+                        <a>en</a>
                     </span>
                 </div>
 
@@ -54,21 +53,52 @@
 
         </nav>
 
+        <div class="bg-image-container" style="background-image: none;">
+            <div class="bg-image" style="overflow: hidden;">
 
-        <div class="bg-image1">
+                <div class="content-overlay bg-darken"
+                    style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; width: 100%; z-index: 10; mix-blend-mode: multiply; overflow:hidden;">
+                </div>
+                <video autoplay muted loop id="myVideo"
+                    style="position: absolute; top: 0; left: 0; right: 0; left: 0; min-height: 100%; min-width: 100%;">
+                    <source src="./videos/izslavideo.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <div class="texto-bienvenida text-white d-flex justify-content-center align-items-center"
+                style="height: 100%; width: 100%;">
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3>¡Te damos la bienvenida a Izsla!</h3>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Un hostel en el corazón de Playa del Carmen</h3>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Esperamos tu visita</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
     </header>
     <!-- MAIN -->
-    <main class="mb-5 container-fluid py-5">
+    <main>
         <!-- imagen mas texto principal -->
 
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container-fluid col-xxl-8 px-4 py-5 bg-pattern">
             <div class="row  align-items-center g-5 py-5">
-                <div class=" col-10 col-sm-8 col-lg-6" data-aos="fade-right" data-aos-duration="2000">
+                <div class=" col-10 col-sm-8 col-lg-6" data-aos="fade-down" data-aos-duration="2000">
                     <img src="./imagenes/terraza-noche.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                         width="700" height="500" loading="lazy">
                 </div>
-                <div class="text-main col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+                <div class="text-main col-lg-6" data-aos="fade-up" data-aos-duration="2000">
                     <h1 class="display-5 fw-bold lh-1 mb-3">IZSLA HOSTEL
 
                     </h1>
@@ -82,80 +112,174 @@
                         playa lo convierten en la opción ideal para una estadía muy exclusiva.
                     </p>
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a class="btn-main" ref="./paginas/habitaciones.html">ver nuestros espacios</a>
+                    <div>
+                        <a class="btn-main" href="./paginas/habitaciones.html">ver nuestros espacios <i
+                                class="fa-solid fa-chevron-right fa-beat-fade"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="row align-items-center g-5 py-5">
+
+                <div class="card text-center bg-light text-muted mx-auto" style="max-width: 75vw;">
+                    <div class="card-header">
+                        <h4>¡Hacé tu reserva con nosotros hoy mismo!</h4>
+                    </div>
+                    <img src="./imagenes/carrusel1.png" alt="">
+                    <div class="card-body">
+                        <!-- FORM para reserva -->
+                        <form
+                            action="https://www.booking.com/hotel/mx/la-izsla-playa-del-carmen.es.html?aid=376374&label=esrow-OtlvhU2CXhSVxek50Z_17wS267754636760%3Apl%3Ata%3Ap1%3Ap22.563.000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1000073%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcUSe6BbHz0Ad_yDShFFSHQ&sid=0944b610855ca1d6846ecd9340bce8e9&all_sr_blocks=892831802_359585399_1_0_0%2C892831802_359585399_1_0_0;checkin=2023-04-17;checkout=2023-04-18;dest_id=-1689065;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=892831802_359585399_1_0_0%2C892831802_359585399_1_0_0;hpos=1;matching_block_id=892831802_359585399_1_0_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=892831802_359585399_1_0_0__23400%2C892831802_359585399_1_0_0__23400;srepoch=1681397210;srpvid=fc7a67ec659d01c8;type=total;ucfs=1&#hotelTmpl"
+                            target="_blank"
+                            class="d-flex justify-content-center mt-5 mb-5 row row-cols-lg-auto g-3 align-items-center">
+                            <div class="col-12">
+                                <label class="visually-hidden" for="datepicker-entrada">ENTRADA</label>
+                                <div class="input-group">
+                                    <div class="input-group-text"><i class="fa-solid fa-calendar-days"></i></div>
+                                    <input type="text" class="form-control" id="datepicker-entrada"
+                                        placeholder="entrada">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="visually-hidden" for="datepicker-entrada">SALIDA</label>
+                                <div class="input-group">
+                                    <div class="input-group-text"><i class="fa-solid fa-calendar-days"></i></div>
+                                    <input type="text" class="form-control" id="datepicker-salida" placeholder="salida">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                                <div class="input-group">
+                                    <div class="input-group-text"><i class="fa-solid fa-person"></i></div>
+                                    <select class="form-select" id="inlineFormSelectPref">
+                                        <option value="1">1 persona</option>
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">RESERVAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-        <!-- FORM para reserva -->
-        <form
-            action="https://www.booking.com/hotel/mx/la-izsla-playa-del-carmen.es.html?aid=376374&label=esrow-OtlvhU2CXhSVxek50Z_17wS267754636760%3Apl%3Ata%3Ap1%3Ap22.563.000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1000073%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcUSe6BbHz0Ad_yDShFFSHQ&sid=0944b610855ca1d6846ecd9340bce8e9&all_sr_blocks=892831802_359585399_1_0_0%2C892831802_359585399_1_0_0;checkin=2023-04-17;checkout=2023-04-18;dest_id=-1689065;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=892831802_359585399_1_0_0%2C892831802_359585399_1_0_0;hpos=1;matching_block_id=892831802_359585399_1_0_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=892831802_359585399_1_0_0__23400%2C892831802_359585399_1_0_0__23400;srepoch=1681397210;srpvid=fc7a67ec659d01c8;type=total;ucfs=1&#hotelTmpl"
-            target="_blank" class="d-flex justify-content-center mt-5 mb-5 row row-cols-lg-auto g-3 align-items-center">
-            <div class="col-12">
-                <label class="visually-hidden" for="datepicker-entrada">ENTRADA</label>
-                <div class="input-group">
-                    <div class="input-group-text"><i class="fa-solid fa-calendar-days"></i></div>
-                    <input type="text" class="form-control" id="datepicker-entrada" placeholder="entrada">
-                </div>
-            </div>
-            <div class="col-12">
-                <label class="visually-hidden" for="datepicker-entrada">SALIDA</label>
-                <div class="input-group">
-                    <div class="input-group-text"><i class="fa-solid fa-calendar-days"></i></div>
-                    <input type="text" class="form-control" id="datepicker-salida" placeholder="salida">
-                </div>
-            </div>
-
-            <div class="col-12">
-                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                <div class="input-group">
-                    <div class="input-group-text"><i class="fa-solid fa-person"></i></div>
-                    <select class="form-select" id="inlineFormSelectPref">
-                        <option value="1"> 1 persona</option>
-                        <option value="2">2 personas</option>
-                        <option value="3">3 personas</option>
-                    </select>
-                </div>
-            </div>
-
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">RESERVAR</button>
-            </div>
-        </form>
-
-
-
+        <!-- Fin Hero -->
         <!-- PARALLAX -->
         <div class="parallax container-fluid bg-darken d-flex align-items-center">
-
-            <h4 class="mx-5">
-                VENI A VIVIR
-                <div>LA EXPERIENCIA IZSLA!!!</div>
-                <button type="button" class="btn btn-primary btn-lg">RESERVAR</button>
-
-            </h4>
-
-
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h3 class="text-white mx-5">¡Viví una experiencia única!</h3>
+                <h3 class="text-white mx-5 mt-5">Experimentá la aventura y la naturaleza</h3>
+                <h3 class="text-white mx-5">en uno de los lugares más maravillosos del mundo</h3>
+            </div>
+            <!-- Hero -->
         </div>
+        <div class="container-fluid col-xxl-8 px-4 py-5 overflox-hidden">
 
+            <div class="row align-items-center g-5 py-5  text-center d-flex flex-column justify-content-center">
 
+                <div class="text-main">
 
+                    <h3 class="display-5 fw-bold lh-1 mb-3">Conocé las opiniones</h3>
 
+                    <h3>Queremos que leas las experiencias de otros viajeros</h3>
 
+                </div>
 
+            </div>
 
+            <div class="row align-items-center g-5">
 
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card mb-4 bg-dark text-white" data-aos="slide-right" data-aos-duration="1000">
+                        <div class="card-body">
+                            <p>Un lugar paradisíaco, la gente del hostel muy amable y las habitaciones muy cómodas.
+                            </p>
 
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVuJTIwcG9ydHJhaXR8ZW58MHx8MHx8&w=1000&q=80"
+                                        alt="avatar" width="50" height="50" style="border-radius: 50%;" />
+                                    <p class="small text-light mb-0 ms-2">Pablo</p>
+                                </div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-md-end g-5">
 
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card mb-4 bg-dark text-white" data-aos="slide-left" data-aos-duration="1000">
+                        <div class="card-body">
+                            <p>Ubicación inmejorable, el lugar hermoso. Las camas podrían ser un poco más cómodas.
+                            </p>
 
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
+                                        width="50" height="50" style="border-radius: 50%;" />
+                                    <p class="small text-light mb-0 ms-2">Martha</p>
+                                </div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="far fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  align-items-center g-5">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card mb-4 bg-dark text-white" data-aos="slide-right" data-aos-duration="1000">
+                        <div class="card-body">
+                            <p>Excelente lugar para compartir con amigos. La gente del hostel muy amable y la
+                                ubicación
+                                es excelente.</p>
 
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <img src="https://as1.ftcdn.net/v2/jpg/03/09/87/96/1000_F_309879613_lZmJBlQXyMaMae0u296xgaq1Vhy9Kg3v.jpg"
+                                        alt="avatar" width="50" height="50" style="border-radius: 50%;" />
+                                    <p class="small text-light mb-0 ms-2">Lucía</p>
+                                </div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Fin Hero -->
 
     </main>
     <!-- FOOTER -->
     <div class="container-fluid text-center bg-dark">
-        <footer class="py-3 bg-dark text-white mt-5">
+        <footer class="py-3 bg-dark text-white">
             <div class="row">
 
 

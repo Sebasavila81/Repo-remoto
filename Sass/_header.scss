@@ -1,20 +1,27 @@
 nav {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background-color: rgba($color: $mainColor, $alpha: 0.5);
+    background-color: rgba($color: $navbarColor, $alpha: 0.5);
+    min-height: $navbarHeight;
 
     .nav-link {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        color: white;
     }
 }
 
-.bg-image1 {
-    background-image: url('../imagenes/carrusel1.png');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
+.bg-image {
+    background-image: url('../imagenes/banner-alternativo.jpg');
+    height: $bgImageHeight;
+    background-position: center;	    
+    background-repeat: no-repeat;	    
+    background-size: cover;	    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 .bg-image2 {
     background-image: url('../imagenes/pileta0.jpg');
@@ -24,3 +31,16 @@ nav {
     background-size: cover;
    
 }
+.bg-image-container {
+    height: $bgImageHeight;
+    overflow: hidden
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity ease-out .5s;
+}
+
+.carousel-item.active {
+    opacity: 1 !important;
+}	
