@@ -193,7 +193,6 @@ nav .nav-link {
 
 /*contactos*/
 .main-contacto {
-  padding: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -201,11 +200,6 @@ nav .nav-link {
 .main-contacto .titulo-contacto {
   text-align: center;
   margin-bottom: 20px;
-}
-.main-contacto .seccion-contacto {
-  display: flex;
-  padding: 100px;
-  justify-content: space-around;
 }
 .main-contacto .seccion-contacto .parrafo-contacto {
   font-size: 24px;
@@ -216,11 +210,8 @@ nav .nav-link {
   height: 300px;
 }
 .main-contacto .seccion-contacto form {
-  border: solid black 1px;
-  border-radius: 15px;
   padding: 50px;
-  box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.8);
-  max-width: 500px;
+  width: 100%;
 }
 .main-contacto .seccion-contacto form .flex-form {
   display: flex;
@@ -228,7 +219,9 @@ nav .nav-link {
   margin-top: 10px;
 }
 .main-contacto .seccion-contacto form input {
-  max-width: 70%;
+  max-width: 100%;
+  margin-top: 10px;
+  height: 50px;
 }
 
 .list-inline li a {
