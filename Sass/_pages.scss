@@ -44,9 +44,10 @@
 }
 
 .bg-pattern {
-    background-image: url('../imagenes/ddc15.jpg');
-    background-repeat: repeat;
+    background-image: url('../imagenes/palm-1.webp'), url('../imagenes/palm-2.jpg');
+    background-repeat: no-repeat, no-repeat;
     background-size: 50%;
+    background-position: top right, bottom left;
 }
 
 
