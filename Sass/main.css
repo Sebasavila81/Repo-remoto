@@ -113,6 +113,7 @@ nav .nav-link {
   background-repeat: no-repeat, no-repeat;
   background-size: 50%;
   background-position: top right, bottom left;
+  background-color: #F4eeDf;
 }
 
 /*galeria*/
@@ -288,6 +289,25 @@ nav .nav-link {
   .main-galeria .grid-galeria img {
     width: 70vw;
     height: 30vh;
+  }
+  .main-galeria .grid-galeria1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 20px;
+  }
+  .main-galeria .grid-galeria1 .img1 {
+    width: 70vw;
+    height: 30vh;
+  }
+  .main-galeria .grid-galeria1 .img2 {
+    width: 70vw;
+    height: 30vh;
+  }
+  .main-galeria .flex-galeria {
+    flex-direction: column;
+    align-items: center;
   }
   /* Contacto responsive*/
   .main-contacto {

@@ -42,7 +42,33 @@
 
             }
         }
+        .grid-galeria1 {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            justify-items: center;
+            gap: 20px;
+
+            .img1 {
+                width: 70vw;
+                height: 30vh;
+
+
+            }
+            .img2 {
+                width: 70vw;
+                height: 30vh;
+
+            }
+        }
+        .flex-galeria {
+            flex-direction: column;
+            align-items: center;
+            
+        }
+            
     }
+    
 
     /* Contacto responsive*/
     .main-contacto {
