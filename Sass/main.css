@@ -101,7 +101,7 @@ nav .nav-link {
 }
 
 .bg-pattern {
-  background-image: url("../imagenes/palm-1.webp"), url("../imagenes/palm-2.jpg");
+  background-image: url("../imagenes/palm-1.webp"), url("../imagenes/palm-2.png");
   background-repeat: no-repeat, no-repeat;
   background-size: 50%;
   background-position: top right, bottom left;
