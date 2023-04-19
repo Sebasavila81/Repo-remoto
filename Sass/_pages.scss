@@ -1,20 +1,13 @@
 /*Index*/
-.text-main {
-    
-    .lead {
-        font-family: "Pragati Narrow", sans-serif;
-        color: #4d4d4d;
-        margin-top: 60px;
-        padding-left: 50px;
-    }
-    .btn-main {
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-        color: #4d4d4d;
-    }
 
+.btn-main {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4d4d;
 }
+
+
 
 .parallax {
     min-height: 100vh;
@@ -25,109 +18,37 @@
     background-size: cover;
 
     h3 {
-        color: white;
         font-size: 40px;
         font-weight: 400;
 
 
     }
 }
-.carousel-item h3 {
-    font-size: 40px;
-    
-    
-}
 
-.bg-darken {
-    background-color: grey;
-    background-blend-mode: multiply;
-}
-
-.bg-pattern {
-    background-image: url('../imagenes/palm-1.webp'), url('../imagenes/palm-2.png');
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50%;
-    background-position: top right, bottom left;
-    background-color: #F4eeDf;
-;
-}
 
 
 /*galeria*/
-/* .container-galeria {
-    width: 50%;
-} */
-
-
-/*
-Esta clase la tenés repetida en media
-*/
-
-.main-galeria {
-    display: flex;
-    flex-direction: column;
-    /* margin-top: 100px; */
-    align-items: center;
-
-    .galeria{
-        img:hover{
-            opacity: 50%;
-         } 
-        }
-
-    .grid-galeria1 {
-        margin-top: 70px auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr calc(50% - 60px);
-        gap: 20px;
-    }
-    .img3 {
-        width: 540px;
-        height: 400px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .grid-galeria {
-        margin-top: 100px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 20px;
-
-        img {
-            width: 300px;
-            height: 200px;
-            transition: all (.5s);
-            border-radius: 10% ;
-
-            &:hover {
-                box-shadow: 4px 4px 4px rgb(14, 7, 7);
-                filter: opacity(0.5);
-            }
-        }
-    }
-}
 
 /*Habitaciones*/
-
-.overlay {
-    background-color: rgba($color: #000000, $alpha: .10);
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    inset: 0;
-    transition: 1s;
-    z-index: 1;
-
-}
-
 .image-container {
     position: relative;
+
+    .overlay {
+        background-color: rgba($color: #000000, $alpha: .10);
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+        transition: 1s;
+        z-index: 1;
+
+    }
+
+
 }
 
 .image-container:hover .overlay {
@@ -139,15 +60,12 @@ Esta clase la tenés repetida en media
     border-radius: 200px;
     opacity: 0;
 
-}
+    p {
+        transition: 1s;
+        font-size: 0px;
+        font-size: 36px;
+    }
 
-.image-container:hover .overlay p {
-    transition: 1s;
-    font-size: 0px;
-}
-
-.overlay p {
-    font-size: 36px;
 }
 
 .card-title {
@@ -156,11 +74,7 @@ Esta clase la tenés repetida en media
 
 
 /*amenities*/
-.tittle-main {
-    font-size: 50px;
-    color: #003454;
-    font-weight: 500
-}
+
 
 .iconos-amenities {
     margin-top: 100px;
@@ -172,53 +86,29 @@ Esta clase la tenés repetida en media
 
 
 /*contactos*/
+.bg-image4 {
+    background-image: url('../imagenes/contacto.jpg');
+    background-size: cover;
 
+}
 
+.seccion-contacto {
 
+    form {
+        padding: 50px;
+        width: 100%;
 
+        .flex-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
 
-
-
-
-
-.main-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    .titulo-contacto {
-        text-align: center;
-        margin-bottom: 20px;
-
-    }
-
-    .seccion-contacto {
-
-        .parrafo-contacto {
-            font-size: 24px;
-            max-width: 500px;
-            img {
-                width: 320px;
-                height: 300px;
-            }
         }
 
-        form {
-            padding: 50px;
-            width: 100%;
-
-            .flex-form {
-                display: flex;
-                flex-direction: column;
-                margin-top: 10px;
-
-            }
-
-            input {
-                max-width: 100%;
-                margin-top: 10px;
-                height: 50px; 
-            }
+        input {
+            max-width: 100%;
+            margin-top: 10px;
+            height: 50px;
         }
     }
 }

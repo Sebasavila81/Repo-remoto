@@ -12,3 +12,26 @@ h1 {
     font-size: 70px;
     color: #003454;
 }
+.bg-darken {
+    background-color: grey;
+    background-blend-mode: multiply;
+}
+.bg-pattern {
+    background-image: url('../imagenes/palm-1.webp'), url('../imagenes/palm-2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50%;
+    background-position: top right, bottom left;
+    background-color: #F4eeDf;
+
+}
+.title-main {
+    font-size: 50px;
+    color: #003454;
+    font-weight: 500
+}
+.lead {
+    font-family: "Pragati Narrow", sans-serif;
+    color: #4d4d4d;
+    margin-top: 60px;
+    padding-left: 50px;
+}

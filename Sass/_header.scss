@@ -1,3 +1,4 @@
+/*Navbar*/
 nav {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
@@ -10,44 +11,93 @@ nav {
     }
 }
 
-.bg-image {
-    background-image: url('../imagenes/banner-alternativo.jpg');
+/*Index*/
+.bg-image-container {
+    background-image: none;
     height: $bgImageHeight;
-    background-position: center;	    
-    background-repeat: no-repeat;	    
-    background-size: cover;	    
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    overflow: hidden;
+
+    .bg-image {
+        overflow: hidden;
+        background-image: url('../imagenes/banner-alternativo.jpg');
+        height: $bgImageHeight;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        .content-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            mix-blend-mode: multiply;
+            overflow: hidden
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+        }
+    }
+
+    .texto-bienvenida {
+        height: 100%;
+        width: 100%;
+        .carousel-item {
+            opacity: 0;
+            transition: opacity ease-out .5s;
+    
+            h3 {
+                font-size: 40px;
+            }
+        }
+    
+        .carousel-item.active {
+            opacity: 1 !important;
+        }
+    }
 }
+
+
+
+
+/*Amenities*/
 .bg-image2 {
     background-image: url('../imagenes/pileta0.jpg');
-    height: 100vh;
+    height: $bgImageHeight;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
+
 }
+
+/*Galeria*/
 .bg-image3 {
     background-image: url('../imagenes/mandala.jpg');
-    height: 100vh;
+    height: $bgImageHeight;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.bg-image-container {
-    height: $bgImageHeight;
-    overflow: hidden
-}
 
-.carousel-item {
-    opacity: 0;
-    transition: opacity ease-out .5s;
-}
+    div {
+        height: 100%;
+        width: 100%;
+    }
 
-.carousel-item.active {
-    opacity: 1 !important;
-}	
+
+}

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Exo&family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 * {
@@ -17,6 +16,33 @@ h1 {
   color: #003454;
 }
 
+.bg-darken {
+  background-color: grey;
+  background-blend-mode: multiply;
+}
+
+.bg-pattern {
+  background-image: url("../imagenes/palm-1.webp"), url("../imagenes/palm-2.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50%;
+  background-position: top right, bottom left;
+  background-color: #F4eeDf;
+}
+
+.title-main {
+  font-size: 50px;
+  color: #003454;
+  font-weight: 500;
+}
+
+.lead {
+  font-family: "Pragati Narrow", sans-serif;
+  color: #4d4d4d;
+  margin-top: 60px;
+  padding-left: 50px;
+}
+
+/*Navbar*/
 nav {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -28,7 +54,14 @@ nav .nav-link {
   color: white;
 }
 
-.bg-image {
+/*Index*/
+.bg-image-container {
+  background-image: none;
+  height: 100vh;
+  overflow: hidden;
+}
+.bg-image-container .bg-image {
+  overflow: hidden;
   background-image: url("../imagenes/banner-alternativo.jpg");
   height: 100vh;
   background-position: center;
@@ -41,7 +74,43 @@ nav .nav-link {
   bottom: 0;
   z-index: -1;
 }
+.bg-image-container .bg-image .content-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  mix-blend-mode: multiply;
+  overflow: hidden;
+}
+.bg-image-container .bg-image #myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+.bg-image-container .texto-bienvenida {
+  height: 100%;
+  width: 100%;
+}
+.bg-image-container .texto-bienvenida .carousel-item {
+  opacity: 0;
+  transition: opacity ease-out 0.5s;
+}
+.bg-image-container .texto-bienvenida .carousel-item h3 {
+  font-size: 40px;
+}
+.bg-image-container .texto-bienvenida .carousel-item.active {
+  opacity: 1 !important;
+}
 
+/*Amenities*/
 .bg-image2 {
   background-image: url("../imagenes/pileta0.jpg");
   height: 100vh;
@@ -50,6 +119,7 @@ nav .nav-link {
   background-size: cover;
 }
 
+/*Galeria*/
 .bg-image3 {
   background-image: url("../imagenes/mandala.jpg");
   height: 100vh;
@@ -57,29 +127,13 @@ nav .nav-link {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.bg-image-container {
-  height: 100vh;
-  overflow: hidden;
-}
-
-.carousel-item {
-  opacity: 0;
-  transition: opacity ease-out 0.5s;
-}
-
-.carousel-item.active {
-  opacity: 1 !important;
+.bg-image3 div {
+  height: 100%;
+  width: 100%;
 }
 
 /*Index*/
-.text-main .lead {
-  font-family: "Pragati Narrow", sans-serif;
-  color: #4d4d4d;
-  margin-top: 60px;
-  padding-left: 50px;
-}
-.text-main .btn-main {
+.btn-main {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -95,77 +149,16 @@ nav .nav-link {
   background-size: cover;
 }
 .parallax h3 {
-  color: white;
   font-size: 40px;
   font-weight: 400;
 }
 
-.carousel-item h3 {
-  font-size: 40px;
-}
-
-.bg-darken {
-  background-color: grey;
-  background-blend-mode: multiply;
-}
-
-.bg-pattern {
-  background-image: url("../imagenes/palm-1.webp"), url("../imagenes/palm-2.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 50%;
-  background-position: top right, bottom left;
-  background-color: #F4eeDf;
-}
-
 /*galeria*/
-/* .container-galeria {
-    width: 50%;
-} */
-/*
-Esta clase la tenés repetida en media
-*/
-.main-galeria {
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 100px; */
-  align-items: center;
-}
-.main-galeria .galeria img:hover {
-  opacity: 50%;
-}
-.main-galeria .grid-galeria1 {
-  margin-top: 70px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr calc(50% - 60px);
-  gap: 20px;
-}
-.main-galeria .img3 {
-  width: 540px;
-  height: 400px;
-}
-.main-galeria p {
-  font-size: 20px;
-}
-.main-galeria .grid-galeria {
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
-}
-.main-galeria .grid-galeria img {
-  width: 300px;
-  height: 200px;
-  transition: all 0.5s;
-  border-radius: 10%;
-}
-.main-galeria .grid-galeria img:hover {
-  box-shadow: 4px 4px 4px rgb(14, 7, 7);
-  filter: opacity(0.5);
-}
-
 /*Habitaciones*/
-.overlay {
+.image-container {
+  position: relative;
+}
+.image-container .overlay {
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
   width: 100%;
@@ -179,10 +172,6 @@ Esta clase la tenés repetida en media
   z-index: 1;
 }
 
-.image-container {
-  position: relative;
-}
-
 .image-container:hover .overlay {
   transition: 1s;
   width: 0%;
@@ -192,13 +181,9 @@ Esta clase la tenés repetida en media
   border-radius: 200px;
   opacity: 0;
 }
-
 .image-container:hover .overlay p {
   transition: 1s;
   font-size: 0px;
-}
-
-.overlay p {
   font-size: 36px;
 }
 
@@ -207,12 +192,6 @@ Esta clase la tenés repetida en media
 }
 
 /*amenities*/
-.tittle-main {
-  font-size: 50px;
-  color: #003454;
-  font-weight: 500;
-}
-
 .iconos-amenities {
   margin-top: 100px;
 }
@@ -221,33 +200,21 @@ Esta clase la tenés repetida en media
 }
 
 /*contactos*/
-.main-contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.bg-image4 {
+  background-image: url("../imagenes/contacto.jpg");
+  background-size: cover;
 }
-.main-contacto .titulo-contacto {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.main-contacto .seccion-contacto .parrafo-contacto {
-  font-size: 24px;
-  max-width: 500px;
-}
-.main-contacto .seccion-contacto .parrafo-contacto img {
-  width: 320px;
-  height: 300px;
-}
-.main-contacto .seccion-contacto form {
+
+.seccion-contacto form {
   padding: 50px;
   width: 100%;
 }
-.main-contacto .seccion-contacto form .flex-form {
+.seccion-contacto form .flex-form {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.main-contacto .seccion-contacto form input {
+.seccion-contacto form input {
   max-width: 100%;
   margin-top: 10px;
   height: 50px;
@@ -279,58 +246,76 @@ Esta clase la tenés repetida en media
   }
   /*Amenities responsive*/
   /* Galeria responsive*/
-  .main-galeria .grid-img {
-    max-width: 5%;
-  }
-  .main-galeria .grid-galeria {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 20px;
-  }
-  .main-galeria .grid-galeria img {
-    width: 70vw;
-    height: 30vh;
-  }
-  .main-galeria .grid-galeria1 {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-items: center;
-    gap: 20px;
-  }
+  /*     .main-galeria {
+
+
+          .grid-img {
+              max-width: 5%;
+          }
+
+          .grid-galeria {
+              display: grid;
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              gap: 20px;
+
+              img {
+                  width: 70vw;
+                  height: 30vh;
+
+
+              }
+          }
+          .grid-galeria1 {
+              display: grid;
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              justify-items: center;
+              gap: 20px;
+
+          }
+
+      } */
   /* Contacto responsive*/
-  .main-contacto {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  .main-contacto .titulo-contacto {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .main-contacto .seccion-contacto {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-  }
-  .main-contacto .seccion-contacto .parrafo-contacto {
-    font-size: 18px;
-    max-width: 350px;
-    text-align: center;
-    padding-top: 50px;
-  }
-  .main-contacto .seccion-contacto form {
-    padding: 10px;
-    max-width: 80vw;
-  }
-  .main-contacto .seccion-contacto form .flex-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .main-contacto .seccion-contacto form .flex-form input {
-    max-width: 70%;
-  }
+  /*  .main-contacto {
+       padding: 10px;
+       display: flex;
+       flex-direction: column;
+
+       .titulo-contacto {
+           text-align: center;
+           margin-bottom: 20px;
+
+       }
+
+       .seccion-contacto {
+           display: flex;
+           flex-direction: column;
+           padding: 10px;
+           align-items: center;
+           .parrafo-contacto {
+               font-size: 18px;
+               max-width: 350px;
+               text-align: center;
+               padding-top: 50px;
+           }
+           form {
+               padding: 10px;
+               max-width: 80vw;
+
+               .flex-form {
+                   display: flex;
+                   flex-direction: column;
+                   margin-top: 10px;
+
+                   input {
+                       max-width: 70%;
+                   }
+               }
+
+
+           }
+
+       }
+   } */
 }/*# sourceMappingURL=main.css.map */
