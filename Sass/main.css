@@ -41,7 +41,6 @@ h1 {
   margin-top: 60px;
 }
 
-/*Mixin*/
 /*Navbar*/
 nav {
   -webkit-backdrop-filter: blur(8px);
@@ -147,10 +146,16 @@ nav .nav-link {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.parallax h3 {
-  font-size: 40px;
-  font-weight: 400;
+  /*  h2  {
+       font-size: 60px;
+       font-weight: 400;
+
+
+   }
+   h3 {
+       font-size: 40px;
+       font-weight: 400;
+   } */
 }
 
 /*Habitaciones*/
@@ -236,4 +241,5 @@ nav .nav-link {
   .card-title {
     display: block;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+/*Mixin*//*# sourceMappingURL=main.css.map */
