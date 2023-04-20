@@ -41,6 +41,7 @@ h1 {
   margin-top: 60px;
 }
 
+/*Mixin*/
 /*Navbar*/
 nav {
   -webkit-backdrop-filter: blur(8px);
@@ -60,12 +61,12 @@ nav .nav-link {
   overflow: hidden;
 }
 .bg-image-container .bg-image {
-  overflow: hidden;
-  background-image: url("../imagenes/banner-alternativo.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  background-image: url("../imagenes/banner-alternativo.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -152,7 +153,6 @@ nav .nav-link {
   font-weight: 400;
 }
 
-/*galeria*/
 /*Habitaciones*/
 .image-container {
   position: relative;

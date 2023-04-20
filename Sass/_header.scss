@@ -1,3 +1,12 @@
+
+/*Mixin*/
+@mixin center-norepeat-cover {
+    height: $bgImageHeight;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*Navbar*/
 nav {
     -webkit-backdrop-filter: blur(8px);
@@ -18,12 +27,9 @@ nav {
     overflow: hidden;
 
     .bg-image {
+        @include center-norepeat-cover;
         overflow: hidden;
         background-image: url('../imagenes/banner-alternativo.jpg');
-        height: $bgImageHeight;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -77,20 +83,14 @@ nav {
 /*Amenities*/
 .bg-image2 {
     background-image: url('../imagenes/pileta0.jpg');
-    height: $bgImageHeight;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include center-norepeat-cover;
 
 }
 
 /*Galeria*/
 .bg-image3 {
     background-image: url('../imagenes/mandala.jpg');
-    height: $bgImageHeight;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include center-norepeat-cover;
 
     div {
         height: 100%;
